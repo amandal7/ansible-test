@@ -10,5 +10,5 @@
    
    - name: Printing Version
      debug: 
-      vars: version.stdout
+      var: version.stdout
    
