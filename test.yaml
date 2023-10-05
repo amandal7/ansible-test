@@ -4,11 +4,11 @@
    - name: Update package
      apt:
         update_cache: yes
-   - name: Update Apt
-     command: apt update -y
-     register: version
+   - name: Install Git
+     command: apt install git -y
+     register: git_version
    
-   - name: Printing Version
+   - name: Printing Git Version
      debug: 
-      var: version.stdout
+      var: git_version.stdout
    
