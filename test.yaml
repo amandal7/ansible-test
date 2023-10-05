@@ -6,7 +6,10 @@
         update_cache: yes
    - name: Install Git
      command: apt install git -y
-     register: git_version
+
+   - name: Install Git
+     command: git --version
+     register: git_version  
    
    - name: Printing Git Version
      debug: 
