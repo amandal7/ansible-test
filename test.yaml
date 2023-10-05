@@ -4,3 +4,11 @@
    - name: Update package
      apt:
         update_cache: yes
+   - name: Update Apt
+     command: apt update -y
+     register: version
+   
+   - name: Printing Version
+     debug: 
+      vars: version.stdout
+   
