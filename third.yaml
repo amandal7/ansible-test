@@ -1,5 +1,5 @@
 ---
-- hosts: web
+- hosts: all
   become: true
   tasks:
    - name: Dislaying Username
@@ -8,3 +8,9 @@
    - name: Display Username
      debug:
       var: whoami.stdout
+   - name: Dislaying ps aux command
+     command: ps aux -u ubuntu
+     register: psaux
+   - name: Display Username
+     debug:
+      var: psaux.stdout   
