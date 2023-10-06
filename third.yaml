@@ -8,9 +8,9 @@
    - name: Display Username
      debug:
       var: whoami.stdout
-   - name: Dislaying ps aux command
-     command: ps aux -u ubuntu
-     register: psaux
-   - name: Display Username
+   - name: current working directory
+     command: pwd
+     register: pwd
+   - name: Display Directory
      debug:
-      var: psaux.stdout   
+      var: pwd.stdout
