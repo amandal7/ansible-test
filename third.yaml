@@ -1,0 +1,10 @@
+---
+- hosts: web
+  become: true
+  tasks:
+   - name: Dislaying Username
+     command: whoami
+     register: whoami
+   - name: Display Username
+     debug:
+      var: whoami.stdout
